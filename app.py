@@ -51,7 +51,7 @@ st.markdown(
     """
     <style>
     html, body, .stApp {
-    zoom: 1.25; /* Adjust zoom between 1.2 – 1.5 depending on laptop screen */
+    zoom: 1.05; /* Adjust zoom between 1.2 – 1.5 depending on laptop screen */
     transform-origin: top center;
 }
 
