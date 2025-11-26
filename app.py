@@ -416,7 +416,9 @@ def view_wheel():
 
 def view_greeting():
     st.markdown("<div class='greeting-title'>Greeting Card</div>", unsafe_allow_html=True)
-
+    # ----------------- CONSTANTS -----------------
+    IMAGE_PATH = "greeting_card.jpeg"
+   
     if not st.session_state.card_open:
         # closed card view
         st.markdown(
@@ -477,10 +479,10 @@ def view_greeting():
 
 
 def view_gallery():
-    play_music(r"C:\Users\WELCOME\Downloads\romantic.mp3")
+    play_music("romantic.mp3")
     st.markdown("<div class='gallery-title'>Photo Gallery 💘</div>", unsafe_allow_html=True)
 
-    IMAGE_FOLDER = r"C:\Users\WELCOME\Downloads\images"
+    IMAGE_FOLDER = "images"
     image_files = [os.path.join(IMAGE_FOLDER, f) for f in os.listdir(IMAGE_FOLDER)
                    if f.lower().endswith((".png", ".jpg", ".jpeg"))]
 
@@ -514,8 +516,8 @@ def view_family():
     st.write("")
 
     # Paths to videos
-    video1 = r"C:\Users\WELCOME\Downloads\WhatsApp Video 2025-11-25 at 3.00.31 PM.mp4"
-    video2 = r"C:\Users\WELCOME\Downloads\WhatsApp Video 2025-11-25 at 3.09.48 PM.mp4"
+    video1 = "videos/v1.mp4"
+    video2 = "videos/v2.mp4"
 
     # States to control single play mode
     if "video_playing" not in st.session_state:
