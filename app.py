@@ -479,7 +479,8 @@ def view_greeting():
 
 
 def view_gallery():
-    play_music("romantic.mp3")
+    play_music(st.audio("https://drive.google.com/uc?export=download&id=1ub_u4fxMfJ0DCQTDdTA_M_f1wdt_0QFG")
+)
     st.markdown("<div class='gallery-title'>Photo Gallery 💘</div>", unsafe_allow_html=True)
 
     IMAGE_FOLDER = "images"
@@ -516,8 +517,10 @@ def view_family():
     st.write("")
 
     # Paths to videos
-    video1 = "videos/v1.mp4"
-    video2 = "videos/v2.mp4"
+    video1 = st.video("https://drive.google.com/file/d/1_pB4D3RBIczFAifMWF6wnX9jI7pFnu8f/preview")
+
+    video2 = st.video("https://drive.google.com/file/d/1OEK2piqctmNHCXZZjiIsZ6ak-IY--7_a/preview")
+
 
     # States to control single play mode
     if "video_playing" not in st.session_state:
